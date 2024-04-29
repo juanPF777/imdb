@@ -1,0 +1,17 @@
+/* p-peliculas.component.css */
+.peliculas-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribuye las tarjetas uniformemente */
+    padding: 0;
+    margin: 0 auto; /* Centra el contenedor en la página */
+    list-style: none;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+.peliculas-list li {
+    display: flex; /* Hace que cada <li> sea también un contenedor flex */
+    width: calc(33.333% - 20px); /* Ajusta esto para 3 elementos por fila, restándole los márgenes */
+    margin: 10px; /* Espacio entre tarjetas */
+    box-sizing: border-box; /* Incluye el padding y border dentro del ancho y alto definido */
+}

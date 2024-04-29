@@ -1,0 +1,13 @@
+<!-- peliculas.component.html -->
+<div class="pelicula-card">
+  <img [src]="peliculaInfo.imageUrl" alt="{{ peliculaInfo.title }}">
+  <h3>{{ peliculaInfo.title }}</h3>
+  <p>{{ peliculaInfo.overview }}</p>
+  <div class="actions">
+    <button class="favorite-button" (click)="toggleFavorite(peliculaInfo)">
+      {{ peliculaInfo.isFavorite ? 'Añadir a Favoritos' : 'Favorita' }}
+    </button>
+    <i class="fas fa-eye seen-icon" [ngClass]="{'seen': peliculaInfo.seen}" (click)="markAsSeen(peliculaInfo)"></i>
+
+  </div>
+</div>

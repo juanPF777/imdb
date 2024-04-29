@@ -1,0 +1,9 @@
+@if (peliculaResults$ | async; as resultObject) {
+    <ul class="peliculas-list">
+      @for (item of resultObject.results; track item.title) {
+        <li>
+          <app-peliculas [peliculaInfo]="item" />
+        </li>
+      }
+    </ul>
+  }
