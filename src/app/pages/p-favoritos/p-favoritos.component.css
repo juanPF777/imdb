@@ -1,0 +1,45 @@
+/* styles.css or peliculas-list.component.css */
+
+/* Update the CSS for .peliculas-list */
+.peliculas-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    max-width: 1200px;
+  }
+  
+  /* Update the CSS for .peliculas-list li */
+  .peliculas-list li {
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  
+
+  .pelicula-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    box-sizing: border-box;
+    flex: 1 1 calc(30% - 20px); /* Ajusta esto para que las tarjetas puedan crecer hasta el 30% menos los márgenes */
+}
+
+.pelicula-card img {
+    max-width: 100%; /* La imagen se adapta al tamaño de la tarjeta */
+    height: auto;
+    border-radius: 4px;
+}
+
+.pelicula-card h3, .pelicula-card p {
+    text-align: center;
+}
+  
+
+  

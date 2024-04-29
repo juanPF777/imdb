@@ -19,20 +19,18 @@ export class PeliculasComponent {
 
 
 toggleFavorite(pelicula: pelicula) {
-  if (this.favoritosService.esFavorito(pelicula)) {
-    if (window.location.pathname === '/favoritos') {
-      this.favoritosService.eliminarDeFavoritos(pelicula);
-      pelicula.isFavorite = false; // Asegurarse de actualizar el estado
-    } else {
-      alert('Esta película ya está en favoritos.');
-    }
-  } else {
+  pelicula.isFavorite = !pelicula.isFavorite;  // Cambia el estado de favorito cada vez que se haga clic.
+  console.log("Película favorita:", pelicula.isFavorite, pelicula.title);  // Verifica el cambio.
+  if (pelicula.isFavorite) {
     this.favoritosService.agregarAFavoritos(pelicula);
-    pelicula.isFavorite = true; // Asegurarse de actualizar el estado
   }
+  else {
+    this.favoritosService.eliminarDeFavoritos(pelicula);
+  }
+
 }
 
-markAsSeen(pelicula: pelicula) {
+toggleSeen(pelicula: pelicula) {
   pelicula.seen = !pelicula.seen;  // Cambia el estado de visto cada vez que se haga clic.
   console.log("Película vista:", pelicula.seen, pelicula.title);  // Verifica el cambio.
 }

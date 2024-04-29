@@ -1,13 +1,11 @@
 <!-- p-favoritos.component.html -->
 <ul class="peliculas-list">
-  <li *ngFor="let pelicula of favoritos">
+  <li *ngFor="let pelicula of favoritos" class="pelicula-item">
     <div class="pelicula-card">
       <img [src]="pelicula.imageUrl" alt="{{ pelicula.title }}">
       <h3>{{ pelicula.title }}</h3>
       <p>{{ pelicula.overview }}</p>
-      <button (click)="toggleFavorite(pelicula)" class="favorite-button">
-        Quitar de Favoritos
-      </button>
     </div>
   </li>
 </ul>
+

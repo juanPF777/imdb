@@ -18,9 +18,7 @@ export class PFavoritosComponent implements OnInit {
   constructor(private favoritosService: FavoritosService) {}
 
   ngOnInit(): void {
-    this.favoritosService.favoritos$.subscribe((peliculas: pelicula[]) => {
-      this.favoritos = peliculas;
-    });
+    this.favoritos = this.favoritosService.obtenerFavoritos();
   }
   toggleFavorite(pelicula: pelicula) {
     this.favoritosService.eliminarDeFavoritos(pelicula);
